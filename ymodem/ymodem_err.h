@@ -1,0 +1,23 @@
+#ifndef YMODEM_H
+#define YMODEM_H
+
+#include "types_def.h"
+
+BEGIN_C_DECLS
+
+typedef enum _ymodem_err_t{
+	YMODEM_OK,
+	YMODEM_ERR_SYNC_PEER,
+	YMODEM_ERR_SEND_HADER,
+	YMODEM_ERR_OPEN_FILE,
+	YMODEM_ERR_SEND_TAIL,
+	YMODEM_ERR_SEND_FILE,
+	YMODEM_ERR_RECV_HADER,
+	YMODEM_ERR_RECV_TAIL,
+	YMODEM_ERR_RECV_FILE
+}ymodem_err_t;
+
+END_C_DECLS
+
+#endif//YMODEM_H
+
