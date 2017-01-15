@@ -17,8 +17,7 @@ int main(int argc, char* argv[]) {
 	
 	const char* device = argv[1];
 	const char* filename = argv[2];
-	stream_t* comm = stream_serial_create(device, 115200, serial::eightbits, serial::parity_none,
-			serial::stopbits_one, serial::flowcontrol_none);
+	stream_t* comm = stream_serial_create(device, 115200, 8, 0, 1, 0);
 	istream_t* file = istream_file_create(filename);
 
 	if(comm && file) {
